@@ -57,7 +57,7 @@ a {
 .content {
     width: 100%;
     background-color: darkslategrey;
-    background-image: url("imgs/clouds-tileable.png");
+    background-image: url("imgs/clouds-tileable.png"), url("imgs/content-tileable.png");
     min-height: 50vh;
     text-align: center;
     display: flex;
