@@ -26,7 +26,7 @@ timelineEvening
     .fromTo('.clouds-evening', 3, {opacity: 0, y: -150}, {opacity: 1, y: 60, duration: 3})
     .fromTo('.mountains', 3, {y: -50}, {y: 25, duration: 3}, '-=3')
     .fromTo('.bg2', 2, {y: 0}, {y: -300, duration: 3}, '-=3')
-    .fromTo('.evening-title', 3, {opacity: 0}, {opacity: 1, duration: 3}, '-=3')
+    .fromTo('.evening-title', 3, {opacity: 0, scale: 0.5}, {opacity: 1, scale: 1, duration: 3}, '-=3')
     .to('.balloon', 3, {y: -750, x:300, duration: 3}, '-=3')
     .to('.balloon2', 3, {y: -250, x:400, duration: 3}, '-=3')
 
