@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Tangerine:wght@700&display=swap');
-
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
+    color: papayawhip;
     font-family: "Poppins", sans-serif;
 }
 nav {
@@ -26,54 +29,70 @@ nav h4 {
 a {
     text-decoration: none;
 }
-.day {
+.night {
     height: 100vh;
+    width: 100%;
+    background-image: url("imgs/clouds-night-2.png"), url("imgs/clouds-night-3.png"), linear-gradient(#141852, #483475, #855988, #FFAF00);
 }
-.sun {
+.moon {
     width: 5%;
     position: absolute;
     top: 5%;
     left: 70%;
-    z-index: -1;
-
 }
-.bg1, .city, .clouds-daytime {
+.bg1, .city, .clouds-night {
     width: 100%;
     position: absolute;
     height: 100vh;
     object-fit: cover;
-    z-index: -1;
 }
-.bg1 {
-    z-index: -3;
-}
-.day-title {
+.night-title {
     position: absolute;
     top: 30%;
     left: 50%;
     font-size: 6rem;
     transform: translate(-50%, -30%);
+    z-index: 2;
 }
 .content {
     width: 100%;
     background-color: darkslategrey;
-    background-image: url("imgs/clouds-tileable.png"), url("imgs/content-tileable.png");
+    background-image: url("imgs/clouds-tileable.png"), url("imgs/clouds-tileable-pink.png");
     min-height: 50vh;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: -1;
+    z-index: 5;
+    position: relative;
 }
 .text {
     padding: 2rem 20rem;
     font-size: 1.5rem;
-    background: -webkit-linear-gradient(#eeaeca, #adc5e9);
+    background: -webkit-linear-gradient(#eeaeca, #6496e3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 4
 }
-.evening {
+.wing {
+    position: absolute;
+    width: 30%;
+    left: 100%;
+    top: 52%;
+}
+.sunrise {
     height: 100vh;
+    width: 100%;
+    background-image: url("imgs/clouds-sunrise-2.png"), linear-gradient(deepskyblue, #fc7174, #eb6859, #fc8862, #fda26b, #fdbb63);
+    //background-image: linear-gradient(#fdbb63, #fda26b, #fc8862, #eb6859, #fc7174);
+}
+.sun {
+    position: absolute;
+    width: 40%;
+    left: 0;
+    z-index: 1;
+    top: 160%;
 }
 .balloon {
     position: absolute;
@@ -82,26 +101,26 @@ a {
     left: 40%;
     filter: contrast(1.4) brightness(0.8);
     transform: scaleX(-1);
-    z-index: -3;
+    z-index: 1;
 }
 .balloon2 {
     position: absolute;
     width: 7.5%;
     bottom: -150%;
     filter: contrast(1.5) brightness(0.7);
-    z-index: 1;
+    z-index: 3;
 }
-.bg2, .mountains, .clouds-evening {
+.bg2, .mountains, .clouds-sunrise {
     width: 100%;
     height: 100vh;
     position: absolute;
     object-fit: cover;
-    z-index: -1;
+    z-index: 2;
 }
 .bg2 {
-    z-index: -3;
+    z-index: 0;
 }
-.evening-title {
+.sunrise-title {
     position: absolute;
     top: 180%;
     left: 50%;
@@ -112,4 +131,5 @@ a {
     background-clip: text;
     background-image: url('imgs/stars.jpg');
     background-size: cover;
+    z-index: 3;
 }
