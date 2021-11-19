@@ -13,7 +13,7 @@ html, body {
 nav {
     position: absolute;
     display: flex;
-    padding: 3rem 10rem;
+    padding: 3% 10%;
     justify-content: space-between;
     width: 100%;
     opacity: 0.8;
@@ -28,6 +28,24 @@ nav h4 {
 }
 a {
     text-decoration: none;
+}
+#night, #sunrise {
+    position: absolute;
+    right: 2%;
+    z-index: 5;
+    margin-top: 3%;
+    width: 6rem;
+    font-size: 1rem;
+}
+#night {
+    background: -webkit-linear-gradient(deepskyblue, #fc7174, #eb6859, #fc8862, #fda26b, #fdbb63);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#sunrise {
+    background: -webkit-linear-gradient(#141852, #483475, #855988, #FFAF00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .night {
     height: 100vh;
@@ -82,27 +100,29 @@ a {
     position: absolute;
     width: 30%;
     left: 100%;
-    top: 52%;
+    bottom : 0;
 }
 .sunrise {
+    position: relative;
     height: 100vh;
     width: 100%;
     background-image: url("imgs/clouds-sunrise-2.png"), linear-gradient(deepskyblue, #fc7174, #eb6859, #fc8862, #fda26b, #fdbb63);
     //background-image: linear-gradient(#fdbb63, #fda26b, #fc8862, #eb6859, #fc7174);
+    overflow-y: hidden;
 }
 .sun {
     position: absolute;
     width: 40%;
     left: 0;
     z-index: 1;
-    top: 160%;
+    top: 10%;
     will-change: transform;
 }
 .balloon {
     position: absolute;
     width: 1.5%;
-    bottom: -150%;
-    left: 40%;
+    top: 20%;
+    left: 60%;
     filter: contrast(1.4) brightness(0.8);
     transform: scaleX(-1);
     z-index: 1;
@@ -111,7 +131,7 @@ a {
 .balloon2 {
     position: absolute;
     width: 7.5%;
-    bottom: -150%;
+    bottom: 0;
     filter: contrast(1.5) brightness(0.7);
     z-index: 3;
     will-change: transform;
@@ -129,7 +149,7 @@ a {
 }
 .sunrise-title {
     position: absolute;
-    top: 180%;
+    top: 30%;
     left: 50%;
     font-size: 6rem;
     transform: translate(-50%, -30%);
@@ -140,4 +160,24 @@ a {
     background-size: cover;
     z-index: 3;
     will-change: transform;
+}
+
+@media(min-width: 2000px) {
+    html {
+        font-size: 150%;
+    }
+}
+@media(max-width: 500px) {
+    html {
+        font-size: 80%;
+    }
+    #night, #sunrise {
+        top: 4%;
+    }
+    .wing {
+        width: 50%;
+    }
+    .balloon {
+        left: 30%;
+    }
 }

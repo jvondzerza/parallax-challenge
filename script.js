@@ -19,7 +19,6 @@ timelineNight
     .fromTo('.asset-credits', 0.2, {opacity: 1}, {opacity: 0}, '-=3')
     .to('.city', 3, {y: 150}, '-=3')
     .to('.moon', 3, {y: 400, x: -80, opacity: 0.1}, '-=3')
-    .fromTo('.bg1', 3, {y: 0}, {y: -50}, '-=3')
     .fromTo('.night-title', 3,{color: '#92b5ce'}, {color: '#E6EBF3', opacity: 0.5}, '-=3')
     .fromTo('.text', 3, {opacity: 0, y: 20}, {opacity: 1, y:0}, '-=3')
 
@@ -43,12 +42,12 @@ let width2 = 1171,
 timelineCloud2.to('.content', duration2, {css:{backgroundPosition:endPosition2 + "px 0"}, repeat:-1, ease:Linear.easeNone});
 
 timelineSunrise
-    .fromTo('.clouds-sunrise', 3, {opacity: 0, y: -150}, {opacity: 1, y: 60, duration: 3})
+    .fromTo('.clouds-sunrise', 3, {opacity: 0, y: -180}, {opacity: 1, y: 60, duration: 3})
     .fromTo('.mountains', 3, {y: -50}, {y: 25}, '-=3')
     .fromTo('.bg2', 3, {y: 0}, {y: -300}, '-=3')
     .fromTo('.sunrise-title', 3, {opacity: 0, scale: 0.5}, {opacity: 1, scale: 1}, '-=3')
     .fromTo('.sun', 3, {y: 100}, {y:20}, '-=3')
-    .to('.balloon', 3, {y: -750, x:300}, '-=3')
+    .from('.balloon', 3, {y: 100, x:-200}, '-=3')
     .to('.balloon2', 3, {y: -250, x:400}, '-=3')
 
 let sceneSunrise = new ScrollMagic.Scene({
