@@ -48,7 +48,7 @@ timelineSunrise
     .fromTo('.sunrise-title', 3, {opacity: 0, scale: 0.5}, {opacity: 1, scale: 1}, '-=3')
     .fromTo('.sun', 3, {y: 100}, {y:-40}, '-=3')
     .from('.balloon', 3, {y: 100, x:-200}, '-=3')
-    .to('.balloon2', 3, {y: -250, x:400}, '-=3')
+    .to('.balloon2', 3, {y: -250, x:200}, '-=3')
 
 let sceneSunrise = new ScrollMagic.Scene({
     triggerElement: ".sunrise",
