@@ -7,6 +7,7 @@ let timelineCloud3 = gsap.timeline({paused: false});
 let timelineWing = gsap.timeline({paused: false});
 let timelineBalloon = gsap.timeline({paused: false});
 let timelineBalloon2 = gsap.timeline({paused: false});
+let timelineSun = gsap.timeline({paused:false});
 
 let width = 1200,
     speed = 5,
@@ -67,3 +68,5 @@ timelineBalloon
     .to('.balloon', 55, {x: 2100, y:-140, ease:Linear.easeNone, repeat: -1});
 timelineBalloon2
     .to('.balloon2', 30, {x: 2100, y:-300, ease:Linear.easeNone, repeat: -1});
+timelineSun
+    .to('.sun', 30, {rotation: 360, ease:Linear.easeNone, repeat: -1})
