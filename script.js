@@ -5,6 +5,8 @@ let timelineCloud = gsap.timeline({paused: false});
 let timelineCloud2 = gsap.timeline({paused: false});
 let timelineCloud3 = gsap.timeline({paused: false});
 let timelineWing = gsap.timeline({paused: false});
+let timelineBalloon = gsap.timeline({paused: false});
+let timelineBalloon2 = gsap.timeline({paused: false});
 
 let width = 1200,
     speed = 5,
@@ -32,7 +34,7 @@ let sceneNight = new ScrollMagic.Scene({
     .addTo(controller);
 
 timelineWing
-    .to('.wing', 60, {x: -2100, ease:Linear.easeNone, repeat: -1});
+    .to('.wing', 50, {x: -2100, ease:Linear.easeNone, repeat: -1});
 
 let width2 = 1171,
     speed2 = 60,
@@ -47,8 +49,8 @@ timelineSunrise
     .fromTo('.bg2', 3, {y: 0}, {y: -300}, '-=3')
     .fromTo('.sunrise-title', 3, {opacity: 0, scale: 0.5}, {opacity: 1, scale: 1}, '-=3')
     .fromTo('.sun', 3, {y: 100}, {y:-40}, '-=3')
-    .from('.balloon', 3, {y: 100, x:-200}, '-=3')
-    .to('.balloon2', 3, {y: -250, x:200}, '-=3')
+    //.from('.balloon', 3, {y: 100, x:-200}, '-=3')
+    //.to('.balloon2', 3, {y: -250, x:200}, '-=3')
 
 let sceneSunrise = new ScrollMagic.Scene({
     triggerElement: ".sunrise",
@@ -61,3 +63,7 @@ let sceneSunrise = new ScrollMagic.Scene({
 
 timelineCloud3
     .to('.sunrise', duration, {css:{backgroundPosition:endPosition + "px 0"}, repeat:-1, ease:Linear.easeNone});
+timelineBalloon
+    .to('.balloon', 55, {x: 2100, y:-140, ease:Linear.easeNone, repeat: -1});
+timelineBalloon2
+    .to('.balloon2', 30, {x: 2100, y:-300, ease:Linear.easeNone, repeat: -1});
