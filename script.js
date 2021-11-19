@@ -20,7 +20,7 @@ timelineNight
     .to('.city', 3, {y: 150}, '-=3')
     .to('.moon', 3, {y: 400, x: -80, opacity: 0.1}, '-=3')
     .fromTo('.bg1', 3, {y: 0}, {y: -50}, '-=3')
-    .fromTo('.night-title', 3,{color: '#92b5ce'}, {x: -100, color: '#E6EBF3', opacity: 0.5}, '-=3')
+    .fromTo('.night-title', 3,{color: '#92b5ce'}, {color: '#E6EBF3', opacity: 0.5}, '-=3')
     .fromTo('.text', 3, {opacity: 0, y: 20}, {opacity: 1, y:0}, '-=3')
 
 let sceneNight = new ScrollMagic.Scene({
