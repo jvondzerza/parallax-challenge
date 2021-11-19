@@ -31,11 +31,9 @@ a {
 }
 #night, #sunrise {
     position: absolute;
-    right: 2%;
     z-index: 5;
-    margin-top: 3%;
-    width: 6rem;
     font-size: 1rem;
+    padding: 3%;
 }
 #night {
     background: -webkit-linear-gradient(deepskyblue, #fc7174, #eb6859, #fc8862, #fda26b, #fdbb63);
@@ -167,17 +165,38 @@ a {
         font-size: 150%;
     }
 }
-@media(max-width: 500px) {
+@media(max-width: 700px) {
     html {
-        font-size: 80%;
+        font-size: 70%;
     }
-    #night, #sunrise {
-        top: 4%;
+    .moon {
+        transform: scale(2);
     }
     .wing {
         width: 50%;
     }
     .balloon {
         left: 30%;
+    }
+    .balloon2 {
+        left: -10%;
+    }
+}
+@media(max-width: 290px) {
+    html {
+        font-size: 60%;
+    }
+    .balloon2 {
+        left: -20%;
+        bottom: -10%;
+    }
+}
+@media(max-width: 1220px) {
+    #night, #sunrise {
+        top: 3%;
+        padding: 3% 10%;
+    }
+    .moon {
+        transform: scale(1);
     }
 }
