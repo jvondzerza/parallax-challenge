@@ -67,10 +67,10 @@ a {
 }
 .night-title {
     position: absolute;
-    top: 30%;
+    top: 15%;
     left: 50%;
     font-size: 6rem;
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, -15%);
     z-index: 2;
     will-change: transform;
 }
@@ -150,10 +150,10 @@ a {
 }
 .sunrise-title {
     position: absolute;
-    top: 30%;
+    top: 15%;
     left: 50%;
     font-size: 6rem;
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, -15%);
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
