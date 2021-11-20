@@ -1,0 +1,23 @@
+{
+  "name": "parallax-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvondzerza/parallax-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jvondzerza/parallax-challenge/issues"
+  },
+  "homepage": "https://github.com/jvondzerza/parallax-challenge#readme",
+  "dependencies": {
+    "terser": "^5.10.0"
+  }
+}
